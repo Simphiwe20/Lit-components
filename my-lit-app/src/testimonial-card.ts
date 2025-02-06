@@ -13,7 +13,7 @@ export class Testimonial_card extends LitElement {
 
     // Define my testimonial array
     @property({ type: Array<Object> })
-    testimonials = [
+    testimonials: testimonial[] = [
         { name: "Sophia L., Data Scientist", testimony: "A game-changer for staying updated. In the fast-evolving AI and data science fields, Roadmap.sh helps me keep track of emerging technologies and essential skills to learn.", picture: "/src/assets/testimonial 1.jpg" },
         { name: "Alex M., Junior Frontend Developer", testimony: "A lifesaver for self-learners! Roadmap.sh gave me the direction I needed to navigate the overwhelming world of web development. It’s like having a personal mentor guiding every step. Highly recommended!", picture: "/src/assets/testimonial 2.jpg" },
         { name: "Priya R., Cloud Engineer", testimony: "The clarity is unmatched. As someone transitioning into tech from another field, Roadmap.sh made it easy to understand what to focus on and when. I landed my first cloud computing role thanks to their resources!", picture: "/src/assets/testimonial 3.jpg" },
@@ -58,7 +58,6 @@ export class Testimonial_card extends LitElement {
             this.currentIndex--
             this.currentTestimonial = this.testimonials[this.currentIndex]
         }
-
     }
 
     static styles = css`   
